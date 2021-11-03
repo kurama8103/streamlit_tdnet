@@ -1,5 +1,5 @@
 gunicorn 
 pandas
-bs4
+beautifulsoup4==4.9.3
 streamlit
 -e git+https://github.com/kurama8103/tdnet_tool.git#egg=tdnet_tool
