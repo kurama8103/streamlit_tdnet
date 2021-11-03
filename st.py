@@ -31,7 +31,7 @@ def main():
 
 def download(td):
     answer = st.button('Create Files Link (TOP 10 files)')
-    if answer == True:
+    if answer == True and td is not None:
         # PDFダウンロード
         td.df = td.df.drop_duplicates()
         td.downloadPDF(limit=10)
