@@ -1,0 +1,5 @@
+gunicorn 
+pandas
+bs4
+streamlit
+-e git+https://github.com/kurama8103/tdnet_tool.git#egg=tdnet_tool
