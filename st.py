@@ -30,14 +30,15 @@ def main():
 
 
 def download(td):
-    answer = st.button('Create Files Link (TOP 10 files)')
-    if answer == True and td is not None:
-        # PDFダウンロード
-        td.df = td.df.drop_duplicates()
-        td.downloadPDF(limit=10)
-        file_name = 'tdnet.zip'
-        link = b64_file_to_href(file_name)
-        st.markdown(link, unsafe_allow_html=True)
+    if  td is not None:
+        answer = st.button('Create Files Link (TOP 10 files)')
+        if answer == True:
+            # PDFダウンロード
+            td.df = td.df.drop_duplicates()
+            td.downloadPDF(limit=10)
+            file_name = 'tdnet.zip'
+            link = b64_file_to_href(file_name)
+            st.markdown(link, unsafe_allow_html=True)
 
 
 def b64_file_to_href(file, mode='f'):
