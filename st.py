@@ -8,7 +8,7 @@ def main():
     st.title('tdnet PDFs Downloader')
     st.markdown("適時開示情報閲覧サービス https://www.release.tdnet.info/inbs/I_main_00.html",
                 unsafe_allow_html=True)
-    sel_code = st.text_input(label='keyword', value='7203')
+    sel_code = st.text_input(label='keyword')
     if len(sel_code) == 0:
         return
 
